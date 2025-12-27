@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Jirawat Boonpean</title>
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <div class="container nav-content">
+        <div class="logo">PORTFOLIO</div>
+        <ul class="nav-links">
+          <li><a href="#home">หน้าแรก</a></li>
+          <li><a href="#about">เกี่ยวกับผม</a></li>
+          <li><a href="#skills">ทักษะ</a></li>
+          <li><a href="#portfolio">ผลงาน</a></li>
+          <li><a href="#certificates">เกียรติบัตร</a></li>
+          <li><a href="#contact">ติดต่อ</a></li>
+        </ul>
+        <div class="hamburger">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+
+    <section id="home" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content" data-aos="fade-up">
+        <h1>
+          สวัสดีครับ ผม <span class="highlight-text">จิรวัฒน์ บุญแผน</span>
+        </h1>
+        <h2>I'm a <span class="typed-text"></span></h2>
+        <p data-aos="fade-up" data-aos-delay="200">
+          นักศึกษาเทคโนโลยีสารสนเทศ ผู้หลงใหลในการผสมผสาน "ศิลปะ" และ "โค้ด"
+          <br />มุ่งมั่นสู่การเป็น Full Stack Developer
+        </p>
+
+        <div style="margin-top: 30px">
+          <a
+            href="#contact"
+            class="btn btn-glow"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            ติดต่อผม <i class="fas fa-arrow-right"></i>
+          </a>
+
+          <a
+            href="PORTFOLIO.pdf"
+            download
+            class="btn"
+            style="
+              background: transparent;
+              border: 2px solid white;
+              margin-left: 10px;
+            "
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            <i class="fas fa-download"></i> ดาวน์โหลด PORTFOLIO
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section-bg-1">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>เกี่ยวกับผม</h2>
+          <div class="line"></div>
+        </div>
+        <div class="about-grid">
+          <div class="about-image" data-aos="fade-right">
+            <img
+              src="profile.jpg.jpg"
+              alt="Jirawat Boonpean"
+              onerror="this.src='https://via.placeholder.com/400x500?text=Your+Photo'"
+            />
+            <div class="image-border"></div>
+          </div>
+
+          <div class="about-text" data-aos="fade-left">
+            <h3>Statement of Purpose</h3>
+            <p class="mt-20">
+              ผมเป็นคนที่หลงใหลในงานออกแบบและเทคโนโลยีมาตั้งแต่เริ่มเรียนสายคอมพิวเตอร์
+              โดยเฉพาะงานด้านกราฟิกและการพัฒนาเว็บไซต์ เพราะเป็นสิ่งที่รวมทั้ง
+              "ศิลปะ" และ "ตรรกะ" ไว้ด้วยกัน
+            </p>
+            <p class="mt-15" style="margin-bottom: 30px">
+              ผมเริ่มต้นจากการเรียนรู้ UX/UI ผ่าน Figma/Canva และพัฒนาทักษะ
+              Frontend (HTML, CSS, JS) จนถึง Backend (PHP, MySQL)
+              เพื่อให้เข้าใจภาพรวมทั้งระบบ
+              ปัจจุบันกำลังมุ่งเน้นพัฒนาทักษะสู่การเป็น Full Stack Developer
+              มืออาชีพ
+            </p>
+
+            <div class="info-card">
+              <h3>ข้อมูลส่วนตัว</h3>
+              <br />
+              <div class="info-list grid-2-col">
+                <div class="info-item">
+                  <i class="fas fa-user"></i>
+                  <span>ชื่อเล่น: อาร์ม</span>
+                </div>
+                <div class="info-item">
+                  <i class="fas fa-calendar"></i>
+                  <span>อายุ: 18 ปี</span>
+                </div>
+                <div class="info-item">
+                  <i class="fas fa-graduation-cap"></i>
+                  <span>สถานะ: นศ. ปวส.1</span>
+                </div>
+                <div class="info-item">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>ห้วยใหญ่, ชลบุรี</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section-bg-2">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>ประวัติการศึกษา</h2>
+          <div class="line"></div>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="timeline-dot"></div>
+            <div class="edu-content">
+              <div class="timeline-year">2025 (ปัจจุบัน)</div>
+              <h3>ประกาศนียบัตรวิชาชีพชั้นสูง (ปวส.)</h3>
+              <p class="institute">
+                วิทยาลัยเทคนิคสัตหีบ สาขาเทคโนโลยีสารสนเทศ
+              </p>
+              <p class="gpa">GPA: <span class="highlight-text">3.12</span></p>
+            </div>
+            <div class="edu-logo">
+              <img src="tatc.jpg" alt="Logo" />
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="timeline-dot"></div>
+            <div class="edu-content">
+              <div class="timeline-year">2022 - 2024</div>
+              <h3>ประกาศนียบัตรวิชาชีพ (ปวช.)</h3>
+              <p class="institute">วิทยาลัยเทคนิคสัตหีบ (Thai-Austrian Tech)</p>
+              <p class="gpa">GPA: 2.85</p>
+            </div>
+            <div class="edu-logo">
+              <img src="tatc.jpg" alt="Logo" />
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="timeline-dot"></div>
+            <div class="edu-content">
+              <div class="timeline-year">2019 - 2021</div>
+              <h3>มัธยมศึกษาตอนต้น</h3>
+              <p class="institute">โรงเรียนราชประดิษฐ์วิทยา</p>
+              <p class="gpa">GPA: 2.50</p>
+            </div>
+            <div class="edu-logo">
+              <img src="rpd.jfif" alt="Logo" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section-bg-1">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>ทักษะความสามารถ</h2>
+          <div class="line"></div>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
+            <i class="fab fa-html5" style="color: #e34c26"></i>
+            <h4>HTML5</h4>
+          </div>
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="150">
+            <i class="fab fa-css3-alt" style="color: #264de4"></i>
+            <h4>CSS3</h4>
+          </div>
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
+            <i class="fab fa-js" style="color: #f0db4f"></i>
+            <h4>JavaScript</h4>
+          </div>
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="250">
+            <i class="fab fa-php" style="color: #8993be"></i>
+            <h4>PHP</h4>
+          </div>
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
+            <i class="fas fa-database" style="color: #00758f"></i>
+            <h4>MySQL</h4>
+          </div>
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="350">
+            <i class="fab fa-bootstrap" style="color: #7952b3"></i>
+            <h4>Bootstrap</h4>
+          </div>
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="400">
+            <i class="fab fa-figma" style="color: #f24e1e"></i>
+            <h4>Figma / Canva</h4>
+          </div>
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="450">
+            <i class="fab fa-python" style="color: #3776ab"></i>
+            <h4>Python</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="section-bg-2">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>ผลงานและกิจกรรม</h2>
+          <div class="line"></div>
+        </div>
+        <div class="project-grid">
+          <div class="project-card" data-aos="flip-left" data-aos-delay="100">
+            <div class="card-banner project-banner-1">
+              <i class="fas fa-car"></i>
+            </div>
+            <div class="project-content">
+              <h3>RidexHub (Web App)</h3>
+              <p class="project-desc">
+                ระบบบริหารจัดการรถยนต์ (เช่า-ซื้อ-ขาย-ยืม) แบบครบวงจร
+                มีระบบจองรถและระบบสมาชิก จัดการฐานข้อมูลรถยนต์ด้วย MySQL
+              </p>
+              <div class="project-tags">
+                <span>PHP</span>
+                <span>MySQL</span>
+                <span>Bootstrap</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-aos="flip-left" data-aos-delay="200">
+            <div class="card-banner project-banner-2">
+              <i class="fas fa-clipboard-list"></i>
+            </div>
+            <div class="project-content">
+              <h3>ระบบบันทึกข้อมูลขนส่งสินค้า</h3>
+              <p class="project-desc">
+                ฝึกงานที่ บจก.จเรรัตน์ค้าวัสดุ พัฒนาแอปด้วย AppSheet เชื่อมต่อ
+                Google Sheet เพื่อเช็คข้อมูล Real-time
+              </p>
+              <div class="project-tags">
+                <span>AppSheet</span>
+                <span>Google Sheet</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-aos="flip-left" data-aos-delay="300">
+            <div class="card-banner project-banner-3">
+              <i class="fas fa-network-wired"></i>
+            </div>
+            <div class="project-content">
+              <h3>ContiWORK CABLING</h3>
+              <p class="project-desc">
+                อบรมและฝึกปฏิบัติการติดตั้งระบบเครือข่าย (Cabling for
+                Engineering) การเดินสายแลน เข้าหัวสาย และทดสอบสัญญาณตามมาตรฐาน
+              </p>
+              <div class="project-tags">
+                <span>Network</span>
+                <span>Training</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-aos="flip-left" data-aos-delay="400">
+            <div class="card-banner project-banner-4">
+              <i class="fas fa-medal"></i>
+            </div>
+            <div class="project-content">
+              <h3>กิจกรรมด้านกีฬา</h3>
+              <ul class="activity-list fa-ul">
+                <li>
+                  <span class="fa-li"><i class="fas fa-futbol"></i></span
+                  ><b>ฟุตบอลกีฬาช่าง:</b> ตัวแทนแผนก IT
+                  ฝึกการทำงานเป็นทีมและความสามัคคี
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fas fa-fist-raised"></i></span
+                  ><b>มวยไทยสมัครเล่น:</b> กีฬาชายหาดเมืองพัทยา
+                  ฝึกความอดทนและความแข็งแกร่ง
+                </li>
+              </ul>
+              <div class="project-tags">
+                <span>Teamwork</span>
+                <span>Soft Skills</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certificates" class="section-bg-1">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>เกียรติบัตรและการอบรม</h2>
+          <div class="line"></div>
+        </div>
+        <div class="project-grid">
+          <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="cert-frame">
+              <img src="lan.jpg" alt="ContiWORK Certificate" />
+            </div>
+            <div class="project-content">
+              <h3>ContiWORK CABLING</h3>
+              <p class="project-desc">
+                ผ่านการอบรมและทดสอบมาตรฐานวิชาชีพ "Cabling for Engineering"
+                (LCCE) การติดตั้งระบบเครือข่ายและสายสัญญาณอย่างถูกวิธี
+              </p>
+              <div class="project-tags">
+                <span>Network</span>
+                <span>Engineering</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="cert-frame">
+              <img src="gg.jpg" alt="Google Certificate" />
+            </div>
+            <div class="project-content">
+              <h3>Google Technical Support</h3>
+              <p class="project-desc">
+                หลักสูตร Technical Support Fundamentals
+                เข้าใจพื้นฐานการแก้ปัญหาคอมพิวเตอร์ ระบบปฏิบัติการ
+                และความปลอดภัยทางไซเบอร์
+              </p>
+              <div class="project-tags">
+                <span>Google</span>
+                <span>Support</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-aos="zoom-in" data-aos-delay="300">
+            <div class="cert-frame">
+              <img src="iot.jpg" alt="IoT Certificate" />
+            </div>
+            <div class="project-content">
+              <h3>IoT Smart Workshop</h3>
+              <p class="project-desc">
+                เข้าร่วมอบรมเชิงปฏิบัติการ
+                การเขียนโปรแกรมควบคุมอุปกรณ์ผ่านเซนเซอร์ (IoT) เบื้องต้น
+              </p>
+              <div class="project-tags">
+                <span>IoT</span>
+                <span>Microcontroller</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section-bg-2">
+      <div class="container contact-container" data-aos="zoom-in-up">
+        <div class="section-title">
+          <h2>ติดต่อ</h2>
+          <div class="line"></div>
+        </div>
+        <div class="contact-box">
+          <p>สนใจร่วมงานหรือสอบถามข้อมูลเพิ่มเติม ติดต่อได้ที่</p>
+          <div class="contact-links">
+            <a href="mailto:jrwbo3112@gmail.com" class="contact-item">
+              <div class="icon-box"><i class="fas fa-envelope"></i></div>
+              <span>jrwbo3112@gmail.com</span>
+            </a>
+            <a href="tel:0803269687" class="contact-item">
+              <div class="icon-box"><i class="fas fa-phone"></i></div>
+              <span>080-326-9687</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>Designed & Built by <strong>Jirawat Boonpean</strong></p>
+        <p class="copyright">&copy; 2025 All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <a href="#" id="backToTop" title="Go to top"
+      ><i class="fas fa-arrow-up"></i
+    ></a>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

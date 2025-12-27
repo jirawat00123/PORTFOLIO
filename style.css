@@ -1,0 +1,694 @@
+@import url("https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;700&family=Poppins:wght@600;700&display=swap");
+
+:root {
+  /* --- ชุดสีหลัก (Modern Theme) --- */
+  --primary-color: #1a2a3a; /* สีกรมท่าเข้ม */
+  --secondary-color: #3498db; /* สีฟ้าสดใส */
+  --accent-color: #00cec9; /* สีเขียวน้ำทะเล */
+  --text-dark: #2d3436; /* สีตัวหนังสือเข้ม */
+  --text-light: #636e72; /* สีตัวหนังสือจาง */
+  --bg-light: #f9fbfc; /* สีพื้นหลังอ่อน */
+  --bg-white: #ffffff; /* สีพื้นหลังขาว */
+
+  /* การไล่สี */
+  --gradient-main: linear-gradient(
+    135deg,
+    var(--secondary-color),
+    var(--accent-color)
+  );
+
+  /* เงา (Box Shadow) */
+  --shadow-sm: 0 5px 15px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Global Reset --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Sarabun", sans-serif;
+  line-height: 1.7;
+  color: var(--text-dark);
+  background-color: var(--bg-white);
+  /* Pattern จุดเล็กๆ พื้นหลัง */
+  background-image: radial-gradient(#dfe6e9 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  color: var(--primary-color);
+}
+
+/* Helper Classes */
+.mt-20 {
+  margin-top: 20px;
+}
+.mt-15 {
+  margin-top: 15px;
+}
+.highlight-text {
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+/* --- Navigation Bar --- */
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.4s ease;
+  padding: 15px 0;
+  background: transparent;
+}
+
+nav.scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: var(--shadow-md);
+  padding: 10px 0;
+  backdrop-filter: blur(10px);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: var(--gradient-main);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 35px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--bg-white);
+  font-weight: 600;
+  transition: color 0.3s;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+nav.scrolled .nav-links a {
+  color: var(--primary-color);
+  text-shadow: none;
+}
+
+.nav-links a:hover {
+  color: var(--accent-color);
+}
+
+.hamburger {
+  display: none;
+  color: var(--bg-white);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+nav.scrolled .hamburger {
+  color: var(--primary-color);
+}
+
+/* --- Hero Section (Slideshow) --- */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  background-color: #1a2a3a;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  transition: background-image 1s ease-in-out; /* ภาพค่อยๆ เปลี่ยน */
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(26, 42, 58, 0.85),
+    rgba(52, 152, 219, 0.5)
+  );
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: var(--bg-white);
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+  color: var(--bg-white);
+}
+.hero-content h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: var(--accent-color);
+  min-height: 40px;
+}
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+  color: #ecf0f1;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 35px;
+  background: var(--gradient-main);
+  color: var(--bg-white);
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(52, 152, 219, 0.5);
+}
+.btn i {
+  margin-right: 8px;
+}
+.btn-glow {
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+}
+
+/* --- Sections General --- */
+section {
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+.section-bg-1 {
+  background-color: var(--bg-white);
+}
+.section-bg-2 {
+  background-color: var(--bg-light);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.section-title h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.section-title .line {
+  width: 80px;
+  height: 5px;
+  background: var(--gradient-main);
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+/* --- About Section --- */
+.about-grid {
+  display: grid;
+  grid-template-columns: 40% 55%;
+  gap: 5%;
+  align-items: center;
+}
+.about-image {
+  position: relative;
+  text-align: center;
+}
+.about-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  z-index: 2;
+}
+.image-border {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100%;
+  height: 100%;
+  border: 5px solid var(--secondary-color);
+  border-radius: 20px;
+  z-index: 1;
+  opacity: 0.3;
+}
+.info-card {
+  background: var(--bg-white);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: var(--shadow-md);
+  border-top: 4px solid var(--secondary-color);
+  margin-top: 30px;
+}
+.grid-2-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+.info-item {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+.info-item i {
+  color: var(--secondary-color);
+  margin-right: 10px;
+  width: 25px;
+  text-align: center;
+}
+
+/* --- Education Section (Timeline + รูปขวา) --- */
+.timeline {
+  position: relative;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 40px;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: #dfe6e9;
+  border-radius: 10px;
+}
+.timeline-item {
+  background: var(--bg-white);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 30px;
+  position: relative;
+  transition: transform 0.3s;
+  margin-left: 60px;
+  /* Flexbox จัดข้อความซ้าย รูปขวา */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.timeline-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+.timeline-dot {
+  position: absolute;
+  left: -29px;
+  top: 35px;
+  width: 18px;
+  height: 18px;
+  background: var(--secondary-color);
+  border: 3px solid #fff;
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+/* ข้อความ Education */
+.edu-content {
+  flex: 1;
+  text-align: left;
+}
+.timeline-year {
+  display: inline-block;
+  padding: 4px 12px;
+  background: var(--gradient-main);
+  color: white;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.institute {
+  color: var(--text-light);
+  margin-bottom: 5px;
+  font-size: 0.95rem;
+}
+.gpa {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+/* รูปโลโก้ Education */
+.edu-logo {
+  flex-shrink: 0;
+}
+.edu-logo img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  padding: 5px;
+}
+
+/* --- Skills Section --- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+.skill-card {
+  background: var(--bg-white);
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-md);
+}
+.skill-card i {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+/* --- Projects & Certificates Section --- */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+.project-card {
+  background: var(--bg-white);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Banner สำหรับ Project ทั่วไป */
+.card-banner {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bg-white);
+  font-size: 2.5rem;
+}
+.project-banner-1 {
+  background: linear-gradient(45deg, #3498db, #2980b9);
+}
+.project-banner-2 {
+  background: linear-gradient(45deg, #00b894, #00cec9);
+}
+.project-banner-3 {
+  background: linear-gradient(45deg, #6c5ce7, #a29bfe);
+}
+.project-banner-4 {
+  background: linear-gradient(45deg, #fd79a8, #e84393);
+}
+
+/* Banner สำหรับ Certificate (พิเศษ) */
+.cert-banner-1 {
+  background: linear-gradient(135deg, #f1c40f, #f39c12);
+  color: white;
+}
+.cert-banner-2 {
+  background: linear-gradient(135deg, #4285f4, #2c3e50);
+  color: white;
+}
+.cert-banner-3 {
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  color: white;
+}
+
+/* กรอบรูป Certificate (ใช้ตัดภาพให้เท่ากัน) */
+.cert-frame {
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #eee;
+}
+.cert-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* หรือเปลี่ยนเป็น contain ถ้าอยากเห็นเต็มใบแต่มีขอบขาว */
+  transition: transform 0.5s ease;
+}
+.project-card:hover .cert-frame img {
+  transform: scale(1.1);
+}
+
+/* Project Content */
+.project-content {
+  padding: 25px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.project-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+.project-desc {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+.activity-list {
+  text-align: left;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  font-size: 0.95rem;
+  flex-grow: 1;
+}
+.activity-list li {
+  margin-bottom: 8px;
+}
+.fa-li i {
+  color: var(--accent-color);
+}
+.project-tags {
+  margin-top: auto;
+}
+.project-tags span {
+  background: #edf2f7;
+  color: var(--primary-color);
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  margin-right: 5px;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+/* --- Contact Section --- */
+.contact-container {
+  max-width: 700px;
+  text-align: center;
+}
+.contact-box {
+  background: var(--bg-white);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+  border-top: 5px solid var(--secondary-color);
+}
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+.contact-item {
+  display: flex;
+  align-items: center;
+  background: #f1f2f6;
+  padding: 12px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  color: var(--text-dark);
+  transition: all 0.3s;
+  font-weight: 500;
+}
+.contact-item:hover {
+  background: var(--secondary-color);
+  color: white;
+  transform: translateY(-3px);
+}
+.icon-box {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+/* --- Footer --- */
+footer {
+  background: var(--primary-color);
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  padding: 30px 0;
+  font-size: 0.9rem;
+}
+footer strong {
+  color: var(--bg-white);
+}
+
+/* --- Back to Top Button --- */
+#backToTop {
+  display: none; /* ซ่อนก่อน เดี๋ยวใช้ JS สั่งโชว์ */
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: var(--secondary-color);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s;
+}
+#backToTop:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-5px);
+}
+
+/* --- Responsive Design (Mobile) --- */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-image {
+    max-width: 350px;
+    margin: 0 auto 30px;
+  }
+  .info-list.grid-2-col {
+    grid-template-columns: 1fr;
+  }
+
+  /* Education: เรียงแนวตั้ง เอารูปขึ้นบน */
+  .timeline::before {
+    left: 30px;
+  }
+  .timeline-item {
+    margin-left: 50px;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+  .edu-content {
+    text-align: center;
+  }
+  .timeline-dot {
+    left: -29px;
+  }
+  .edu-logo img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+  }
+
+  /* === เพิ่มส่วนนี้ เพื่อให้เมนูมือถือเลื่อนลงมาได้ === */
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px; /* ความสูงโดยประมาณของ Navbar */
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    padding: 20px 0;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.3s ease forwards;
+  }
+
+  .nav-links.active li {
+    margin: 15px 0; /* จัดระยะห่างแต่ละเมนู */
+    text-align: center;
+  }
+
+  .nav-links.active a {
+    color: white;
+    font-size: 1.1rem;
+    display: block; /* เพิ่มพื้นที่สัมผัส */
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
